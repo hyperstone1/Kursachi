@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatabaseDataSet" targetNamespace="http://tempuri.org/DatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/DatabaseDataSet.xsd" xmlns="http://tempuri.org/DatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatabaseConnectionString (Settings)" PropertyReference="ApplicationSettings.WindowsFormsApp2.Properties.Settings.GlobalReference.Default.DatabaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Vedomost1TableAdapter" GeneratorDataComponentClassName="Vedomost1TableAdapter" Name="Vedomost1" UserDataComponentName="Vedomost1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="Vedomost1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT name_fakultativa, FIO_prepoda, SumOfkolvo_zanyatij, SumOfCoast FROM Vedomost1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name_fakultativa" DataSetColumn="name_fakultativa" />
+              <Mapping SourceColumn="FIO_prepoda" DataSetColumn="FIO_prepoda" />
+              <Mapping SourceColumn="SumOfkolvo_zanyatij" DataSetColumn="SumOfkolvo_zanyatij" />
+              <Mapping SourceColumn="SumOfCoast" DataSetColumn="SumOfCoast" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Ведомость занятых на факультативах учениковTableAdapter" GeneratorDataComponentClassName="Ведомость_занятых_на_факультативах_учениковTableAdapter" Name="Ведомость занятых на факультативах учеников" UserDataComponentName="Ведомость занятых на факультативах учениковTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="Ведомость занятых на факультативах учеников" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FIO_uch, CountOfname_fakultativa FROM [Ведомость занятых на факультативах учеников]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FIO_uch" DataSetColumn="FIO_uch" />
+              <Mapping SourceColumn="CountOfname_fakultativa" DataSetColumn="CountOfname_fakultativa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Ведомость по ученикам(5)TableAdapter" GeneratorDataComponentClassName="Ведомость_по_ученикам_5_TableAdapter" Name="Ведомость по ученикам(5)" UserDataComponentName="Ведомость по ученикам(5)TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="Ведомость по ученикам(5)" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FIO_uch, name_fakultativa, SumOfkolvo_zanyatij FROM [Ведомость по ученикам(5)]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FIO_uch" DataSetColumn="FIO_uch" />
+              <Mapping SourceColumn="name_fakultativa" DataSetColumn="name_fakultativa" />
+              <Mapping SourceColumn="SumOfkolvo_zanyatij" DataSetColumn="SumOfkolvo_zanyatij" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DatabaseDataSet" msprop:Generator_UserDSName="DatabaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Vedomost1" msprop:Generator_TableClassName="Vedomost1DataTable" msprop:Generator_TableVarName="tableVedomost1" msprop:Generator_TablePropName="Vedomost1" msprop:Generator_RowDeletingName="Vedomost1RowDeleting" msprop:Generator_RowChangingName="Vedomost1RowChanging" msprop:Generator_RowEvHandlerName="Vedomost1RowChangeEventHandler" msprop:Generator_RowDeletedName="Vedomost1RowDeleted" msprop:Generator_UserTableName="Vedomost1" msprop:Generator_RowChangedName="Vedomost1RowChanged" msprop:Generator_RowEvArgName="Vedomost1RowChangeEvent" msprop:Generator_RowClassName="Vedomost1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name_fakultativa" msprop:Generator_ColumnVarNameInTable="columnname_fakultativa" msprop:Generator_ColumnPropNameInRow="name_fakultativa" msprop:Generator_ColumnPropNameInTable="name_fakultativaColumn" msprop:Generator_UserColumnName="name_fakultativa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIO_prepoda" msprop:Generator_ColumnVarNameInTable="columnFIO_prepoda" msprop:Generator_ColumnPropNameInRow="FIO_prepoda" msprop:Generator_ColumnPropNameInTable="FIO_prepodaColumn" msprop:Generator_UserColumnName="FIO_prepoda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SumOfkolvo_zanyatij" msprop:Generator_ColumnVarNameInTable="columnSumOfkolvo_zanyatij" msprop:Generator_ColumnPropNameInRow="SumOfkolvo_zanyatij" msprop:Generator_ColumnPropNameInTable="SumOfkolvo_zanyatijColumn" msprop:Generator_UserColumnName="SumOfkolvo_zanyatij" type="xs:double" minOccurs="0" />
+              <xs:element name="SumOfCoast" msprop:Generator_ColumnVarNameInTable="columnSumOfCoast" msprop:Generator_ColumnPropNameInRow="SumOfCoast" msprop:Generator_ColumnPropNameInTable="SumOfCoastColumn" msprop:Generator_UserColumnName="SumOfCoast" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ведомость_x0020_занятых_x0020_на_x0020_факультативах_x0020_учеников" msprop:Generator_TableClassName="Ведомость_занятых_на_факультативах_учениковDataTable" msprop:Generator_TableVarName="tableВедомость_занятых_на_факультативах_учеников" msprop:Generator_TablePropName="Ведомость_занятых_на_факультативах_учеников" msprop:Generator_RowDeletingName="Ведомость_занятых_на_факультативах_учениковRowDeleting" msprop:Generator_RowChangingName="Ведомость_занятых_на_факультативах_учениковRowChanging" msprop:Generator_RowEvHandlerName="Ведомость_занятых_на_факультативах_учениковRowChangeEventHandler" msprop:Generator_RowDeletedName="Ведомость_занятых_на_факультативах_учениковRowDeleted" msprop:Generator_UserTableName="Ведомость занятых на факультативах учеников" msprop:Generator_RowChangedName="Ведомость_занятых_на_факультативах_учениковRowChanged" msprop:Generator_RowEvArgName="Ведомость_занятых_на_факультативах_учениковRowChangeEvent" msprop:Generator_RowClassName="Ведомость_занятых_на_факультативах_учениковRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FIO_uch" msprop:Generator_ColumnVarNameInTable="columnFIO_uch" msprop:Generator_ColumnPropNameInRow="FIO_uch" msprop:Generator_ColumnPropNameInTable="FIO_uchColumn" msprop:Generator_UserColumnName="FIO_uch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountOfname_fakultativa" msprop:Generator_ColumnVarNameInTable="columnCountOfname_fakultativa" msprop:Generator_ColumnPropNameInRow="CountOfname_fakultativa" msprop:Generator_ColumnPropNameInTable="CountOfname_fakultativaColumn" msprop:Generator_UserColumnName="CountOfname_fakultativa" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ведомость_x0020_по_x0020_ученикам_x0028_5_x0029_" msprop:Generator_TableClassName="_Ведомость_по_ученикам_5_DataTable" msprop:Generator_TableVarName="_tableВедомость_по_ученикам_5_" msprop:Generator_TablePropName="_Ведомость_по_ученикам_5_" msprop:Generator_RowDeletingName="_Ведомость_по_ученикам_5_RowDeleting" msprop:Generator_RowChangingName="_Ведомость_по_ученикам_5_RowChanging" msprop:Generator_RowEvHandlerName="_Ведомость_по_ученикам_5_RowChangeEventHandler" msprop:Generator_RowDeletedName="_Ведомость_по_ученикам_5_RowDeleted" msprop:Generator_UserTableName="Ведомость по ученикам(5)" msprop:Generator_RowChangedName="_Ведомость_по_ученикам_5_RowChanged" msprop:Generator_RowEvArgName="_Ведомость_по_ученикам_5_RowChangeEvent" msprop:Generator_RowClassName="_Ведомость_по_ученикам_5_Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FIO_uch" msprop:Generator_ColumnVarNameInTable="columnFIO_uch" msprop:Generator_ColumnPropNameInRow="FIO_uch" msprop:Generator_ColumnPropNameInTable="FIO_uchColumn" msprop:Generator_UserColumnName="FIO_uch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_fakultativa" msprop:Generator_ColumnVarNameInTable="columnname_fakultativa" msprop:Generator_ColumnPropNameInRow="name_fakultativa" msprop:Generator_ColumnPropNameInTable="name_fakultativaColumn" msprop:Generator_UserColumnName="name_fakultativa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SumOfkolvo_zanyatij" msprop:Generator_ColumnVarNameInTable="columnSumOfkolvo_zanyatij" msprop:Generator_ColumnPropNameInRow="SumOfkolvo_zanyatij" msprop:Generator_ColumnPropNameInTable="SumOfkolvo_zanyatijColumn" msprop:Generator_UserColumnName="SumOfkolvo_zanyatij" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
