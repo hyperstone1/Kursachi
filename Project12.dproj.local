@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.391,=C:\Users\kingo\Desktop\курсовая1\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.331,=C:\Users\kingo\Desktop\курс1\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.474,C:\Users\kingo\Documents\Embarcadero\Studio\Projects\Project12.dproj=C:\Users\kingo\Desktop\курс1\Project12.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.527,=C:\Users\kingo\Documents\Embarcadero\Studio\Projects\Unit11.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.478,C:\Users\kingo\Documents\Embarcadero\Studio\Projects\Unit8.dfm=C:\Users\kingo\Desktop\курс1\Unit8.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.212,=C:\Users\kingo\Desktop\курс1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.966,=C:\Users\kingo\Desktop\курс1\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.950,=C:\Users\kingo\Desktop\курс1\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.662,=C:\Users\kingo\Documents\Embarcadero\Studio\Projects\Unit8.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.478,C:\Users\kingo\Documents\Embarcadero\Studio\Projects\Unit8.pas=C:\Users\kingo\Desktop\курс1\Unit8.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.884,=C:\Users\kingo\Documents\Embarcadero\Studio\Projects\Unit8.pas</Transaction>
+  </Transactions>
+</BorlandProject>

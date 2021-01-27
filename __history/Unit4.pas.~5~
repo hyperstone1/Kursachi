@@ -1,0 +1,72 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TForm4 = class(TForm)
+    BitBtn1: TBitBtn;
+    Memo1: TMemo;
+    OpenDialog1: TOpenDialog;
+    SaveDialog1: TSaveDialog;
+    procedure BitBtn1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+        var
+        i,j,summ:integer;
+        
+var
+Form4:Tform4;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit2, Unit3, Unit8;
+
+
+
+
+procedure TForm4.BitBtn1Click(Sender: TObject);
+var
+sw:integer;
+begin
+
+
+for j := 1 to nzapO do
+ begin
+ for i := 1 to nzapB do
+  if bug[i].KodFak = j   then
+
+  Memo1.Lines.Add( bug[i].Nazvfak+'  '+otdel[j].Fioprepoda) ;
+
+ end;
+ Memo1.Clear;
+
+ for i := 1 to nzapB-1 do
+   for j := i to nzapB do
+   if Bug[i].Nazvfak>Bug[j].Nazvfak then
+   
+   begin
+    bug[i].Nazvfak:=sw;
+     bug[i].Nazvfak:=bug[j].Nazvfak ;
+     sw:=bug[j].Nazvfak
+   end;
+     
+
+     for i := 1 to nzapB do
+ if bug[i].Nazvfak<> bug[i+1].Nazvfak then
+ memo1.Lines.Add(bug[i].Nazvfak);
+
+
+end;
+
+end.
