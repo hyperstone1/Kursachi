@@ -1,0 +1,48 @@
+unit Unit8;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.Imaging.jpeg,
+  Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TForm8 = class(TForm)
+    OpenDialog1: TOpenDialog;
+    SaveDialog1: TSaveDialog;
+    MainMenu1: TMainMenu;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Image1: TImage;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    N9: TMenuItem;
+    procedure N9Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form8: TForm8;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm8.N9Click(Sender: TObject);
+begin
+Form5.Showmodal;
+end;
+
+end.

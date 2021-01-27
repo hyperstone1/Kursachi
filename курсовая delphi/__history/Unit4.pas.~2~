@@ -1,0 +1,170 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TForm4 = class(TForm)
+    BitBtn1: TBitBtn;
+    Memo1: TMemo;
+    OpenDialog1: TOpenDialog;
+    SaveDialog1: TSaveDialog;
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+   Type
+  Tuchenik=Record
+  Ocenka:integer;
+  FIOuch:string[80];
+  Tel:integer;
+  Kolvochasov:integer;
+  Koduch:integer;
+  NazvFak:string[80];
+  End;
+
+
+var
+  Form4: TForm4;
+  Fzzz:file of Tuchenik;
+  Fttt:textfile;
+  nzap:integer; //nomer zapisi
+  uchenik:array [1..100] of Tuchenik;
+  uchenik1:array [1..100] of Tuchenik;
+  FileNameZ,FileNameT:string;
+
+  Type
+  TBug=Record
+  KodUch:integer;
+  KodFak:integer;
+  Nazvfak:string[80];
+  Coast:integer;
+  KodPrepoda:integer;
+  Data:string[90];
+  KodBug:integer;
+  End;
+
+var
+  Fz:file of TBug;
+  Ft:textfile;
+  Bug:array [1..100] of TBug;
+  Bug1:array [1..100] of TBug;
+  FileNameZzz,FileNameTtt:string;
+
+  Type
+  Totdel=Record
+  KodFak:integer;
+  Fioprepoda:string[80];
+  Tel:integer;
+  KodPrepoda:integer;
+  KodBug:integer;
+  End;
+
+var
+  fzz:file of TOtdel;
+  ftt:textfile;
+  otdel:array [1..100] of Totdel;
+  otdel1:array [1..100] of Totdel;
+  FileNameZz,FileNameTt:string;
+  nzap1,nzap2,nzap3,nzap4,nzap5:integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.BitBtn1Click(Sender: TObject);
+var sf, i,o,p: Integer;
+begin
+  if OpenDialog1.Execute then
+  begin
+  FileNameZ:=OpenDialog1.FileName;
+  AssignFile(Fz, FileNameZ);
+  Reset(Fz); // открывает файл
+
+  end;
+
+nzap:=0;
+nzap2:=0;
+while not eof(Fz) do     // будет проверять файл,пока указатель не будет в конце файла
+  begin
+  nzap:=nzap+1;
+  nzap2:=nzap2+1;
+  Read(Fz,bug[nzap]); // записываем содержимое файла Fz в массив ученик nzap
+  Bug1[nzap2]:=Bug[nzap];
+  end;
+  if OpenDialog1.Execute then
+    begin
+    FileNameZz:=OpenDialog1.FileName;
+    AssignFile(Fzz, FileNameZz);
+    Reset(Fzz); // открывает файл
+
+    end;
+
+nzap1:=0;
+nzap3:=0;
+while not eof(Fzz) do     // будет проверять файл,пока указатель не будет в конце файла
+    begin
+    nzap1:=nzap1+1;
+    nzap3:=nzap3+1;
+    Read(Fzz,otdel[nzap1]); // записываем содержимое файла Fz в массив ученик
+    Otdel1[nzap3]:=Otdel[nzap1];
+
+
+
+    end;
+    if OpenDialog1.Execute then
+  begin
+  FileNameZzz:=OpenDialog1.FileName;
+  AssignFile(Fzzz, FileNameZzz);
+  Reset(Fzzz);
+  end;
+nzap4:=0;
+nzap5:=0;
+while not eof(Fzzz) do     // будет проверять файл,пока указатель не будет в конце файла
+  begin
+  nzap4:=nzap4+1;
+  nzap5:=nzap5+1;
+  Read(Fzzz,uchenik[nzap4]); // записываем содержимое файла Fz в массив ученик nzap
+  uchenik1[nzap5]:=uchenik[nzap4];
+  end;
+  {for i := 1 to nzap2 do
+     sf:=bug1[i].Coast[1];
+      for i := 2 to nzap2 do
+        begin
+        sf:=sf+bug1[i];
+        end;
+           }
+
+
+
+
+
+
+
+
+
+
+
+     begin
+      for o := 1 to nzap3 do
+
+        begin
+        if bug1[i].KodPrepoda=otdel1[o].KodPrepoda then
+        for p := 1 to nzap5 do
+
+        if bug1[i].KodUch=uchenik1[p].Koduch  then
+               begin
+                memo1.Lines.Add(bug1[i].Nazvfak+' '+inttostr(Bug1[i].Coast)+' '+Inttostr(uchenik[p].Kolvochasov)+' '+Otdel1[o].Fioprepoda);
+               end;
+        end;
+      end;
+
+end;
+
+end.
