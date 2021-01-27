@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />	
+				<link rel="stylesheet" type="text/css" href="страница_обувь.css" />
+				<!--<link rel="stylesheet" type="text/css" href="slider.css" />-->
+
+				<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+				
+				<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />	
+									<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+				 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  				<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+  </script>
+	</head>
+
+		<body>
+
+			<header>
+				<div class="header-container">
+					<div class="logo">
+						<img src="img/element.jpg" alt="logotype" width = 10%>
+						<h5>Element TM</h5>
+					</div>
+								<input type="checkbox" id="menu-checkbox">
+									<nav role="navigation">
+										<label for="menu-checkbox" class="toggle-button" 
+										data-open="MENU" data-close="Close" onclick></label>
+											<ul class="main-menu">
+												<li><a href="проба меню.html">HOME</a></li>
+												<li><a href="#">PORTFOLIO</a></li>
+												<li><a href="#">BLOG</a></li>
+												<li><a href="о нас.html">ABOUT US</a></li>
+												<li><a href="buy.html">CONTACTS</a></li>
+											</ul>
+									</nav>
+				</div >
+			</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+			<div class ="obytak">
+				<h1 align="center">Shoes</h1>
+			</div>			
+		<div class ="content">
+			<div class="menu">
+
+			
+			
+				
+				
+				<ul>Обувь</ul>
+					<li><a href="shortshoes.html" tabindex="0">Низкие кеды</a></li>
+					<li><a href="tallshoes.html" tabindex="0">Высокие кеды</a></li>
+					<li><a href="boots.html" tabindex="0">Ботинки</a></li>
+					<li><a href="sneakers.html" tabindex="0">Кроссовки</a></li>
+					<li><a href="slanci.html" tabindex="0">Сланцы</a></li>
+				</ul>
+
+				<ul>Бренд</ul>
+			  	<li><a href="#" tabindex="0">DC</a></li>
+			  	<li><a href="#" tabindex="0">Etnies</a></li>
+					<li><a href="#" tabindex="0">Vans</a></li>
+					<li><a href="#" tabindex="0">Quicksilver</a></li>
+					<li><a href="#" tabindex="0">Emerica</a></li>
+				</ul>
+	<br>	
+		<div class="slider">
+			<p>
+  <label for="amount">Price range:</label>
+  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+ 
+<div id="slider-range"></div>
+ </div>
+	
+			</div>
+
+			
+			<div class="odezhda">
+
+						<a href ="quicksilvercarver.html"><img src="img/QUICKSELVER CARVER.jpg" width = 330px height = 343px title="DC TONIK"></a>
+					<a href ="quicksilvercarver.html">QUICKSILVER CARVER</a>
+				
+
+				
+					<a href="quicksilvermolakai.html"><img src="img/QUICKSELVER MOLOKAI.jpg" width = 340px height = 340px></a>
+					<a href ="quicksilvermolakai.html">QUICKSILVER MOLOKAI</a>
+			
+					
+					
+					<a href ="quicksilverlabyback.html"><img src="img/QUICKSILVER LAYBACK.jpg" width = 350px height = 350px></a>
+					<a href ="quicksilverlabyback.html">QUICKSILVER LAYBACK</a>
+								
+					
+					<a href ="quicksilvershibori.html"><img src="img/QUICKSILVER SHIBORI.jpg" width = 350px height = 350px></a>
+					<a href ="quicksilvershibori.html">QUICKSILVER SHIBORI</a>
+					
+
+		
+					
+	
+</div>
+
+			</body>
+</html>

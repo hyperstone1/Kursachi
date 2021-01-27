@@ -1,0 +1,114 @@
+body{
+/*background-color:white;*/
+font-family: 'Shadows Into Light', cursive;
+width:1325px;
+margin:0 auto;
+}
+
+
+header{
+/*	background-color:#34495E;*/
+background:#f6f6f6;
+position:fixed;
+
+
+}
+
+*{
+	padding:0;
+	margin:0;
+}
+li{
+	list-style:none;
+	display: flex;
+}
+a{
+	text-decoration:none;
+
+}
+.header-container{
+	width:1325px;
+	margin: 0 auto;
+	display: flex;
+justify-content: space-between;
+
+}
+h5{
+	margin-left:20px;
+}
+.header-container img{
+	margin-left:20px;
+}
+
+.header-container a{
+	color:#000;
+	font-size:19px;
+	padding:15px 6px;
+	margin-right:63px;
+
+}
+/*.logo{
+	float:left;
+}*/
+.header-container a:hover{
+background-color:#ffea00;
+}
+
+#menu-checkbox{
+	display:none;
+
+}
+
+ul{
+	display:flex;
+}
+
+li{
+margin-top:14px;
+}
+
+h1{
+	margin-left:60px;
+	width: 1200px;
+	background-color:#E2D5D5;
+
+	padding:0;
+	justify-content: center;
+	
+}
+
+div.dc img{
+	border:2px solid #34495E;
+	border-radius:30px;
+	margin-top:-7px;
+padding:0px;
+margin-right:-7px;
+margin-left:100px;
+}
+p{
+	margin-left:550px;
+	margin-right:220px;
+/*	text-align:center;*/
+}
+div.toniks {
+	height:1000px;
+	padding:0;
+	margin:0;
+	margin:0 auto;
+	width:1300px;
+
+}
+div.redact{
+	margin-left:550px;
+}
+
+h2{
+margin-left:550px;
+}
+hr {
+	margin-left:550px;
+	margin-right:245px;
+box-sizing: content-box;
+height: 0;
+overflow: visible;
+}
